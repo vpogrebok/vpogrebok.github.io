@@ -828,7 +828,7 @@
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.8.0
+ Version: 1.8.1
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
@@ -3834,19 +3834,52 @@
 
 $(function() {
 
-    var slider = $('#intro');
+    var slider = $("#certificates__slider");
     
     slider.slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        fade: true,
-        cssEase: 'linear',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000
+      centerPadding: '60px',
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
     });
+
+    var header = $("#header"),
+            introH = $("#intro").innerHeight(),
+            scrollOffset = $(window).scrollTop();
+    
+    
+        /* Fixed Header */
+        checkScroll(scrollOffset);
+    
+        $(window).on("scroll", function() {
+            scrollOffset = $(this).scrollTop();
+    
+            checkScroll(scrollOffset);
+        });
+    
+        function checkScroll(scrollOffset) {
+            if( scrollOffset >= introH ) {
+                header.addClass("fixed");
+            } else {
+                header.removeClass("fixed");
+            }
+        }
 
     $("#burger").on("click", function(e) {
         e.preventDefault()
@@ -3859,6 +3892,46 @@ $(function() {
     
         $(this).toggleClass("active");
     });
+    
+    $("#burger").on("click", function(e) {
+        e.preventDefault()
+    
+          btn.removeClass('show');
+    });
+
+    $("#burger").on("click", function(e) {
+        e.preventDefault()
+    
+        $("#header").toggleClass("active");
+    });
+
+    $("[data-collapse]").on("click", function(event) {
+            event.preventDefault();
+    
+            var $this = $(this),
+                blockId = $this.data('collapse');
+    
+            $this.toggleClass("active");
+    });
+
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+    
+        var $this = $(this),
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top;
+    
+        $("#nav a").removeClass("active");
+        $this.addClass("active");
+    
+        $("html, body").animate({
+            scrollTop:  blockOffset
+        }, 600);
+    
+       $("#nav").removeClass("show");
+    
+       $("#burger").removeClass("active");
+    });
 
     var btn = $('#button');
     
@@ -3868,34 +3941,11 @@ $(function() {
         } else {
           btn.removeClass('show');
       }
+    
     });
     
       btn.on('click', function(e) {
         e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '300');
-    });
-
-    var header = $("#header"),
-        introH = $("#intro").innerHeight(),
-        newpageH = $("#newpage").innerHeight();
-    
-    var rsltH;
-    
-    if (introH) {
-        rsltH = introH;
-    } else if(newpageH) {
-        rsltH = newpageH;
-    };
-    
-    var pathname = document.location.pathname;
-            console.log('the pathname is: ', pathname);
-    
-    $('#nav a').each(function () {
-        var value = $(this).attr('href');
-    
-        if (pathname.indexOf(value) > -1) {
-            $(this).closest('#link').addClass('active');
-            return false;
-        }
+        $("html, body").animate({scrollTop: 0}, 300);
     });
 });
