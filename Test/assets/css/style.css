@@ -687,7 +687,7 @@ p {
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
     .advantage {
-        height: 135px;
+        height: 180px;
         padding-top: 5px;
     }
 }
