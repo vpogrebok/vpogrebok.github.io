@@ -265,7 +265,23 @@ p {
     .nav__ul {
         padding-left: 17px;
         margin-top: 7px;
-        font-size: 8px;
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .nav__ul {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .nav__ul {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
@@ -377,7 +393,7 @@ p {
 
 @media screen and (max-width: 667px) and (orientation: landscape) {
     .content__inner {
-        top: 35px;
+        top: 23px;
     }
 }
 
@@ -468,6 +484,12 @@ p {
         left: -65px;
         top: 48px;
         height: 2px;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .content__item {
+        margin-top: 5px;
     }
 }
 
@@ -628,6 +650,13 @@ p {
     }
 }
 
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .content__info {
+        padding: 5px 0;
+        font-size: 8px;
+    }
+}
+
 .advantage {
     width: 100%;
     height: 236px;
@@ -660,6 +689,7 @@ p {
 
 .advantage__col {
     text-align: center;
+    padding-bottom: 4px;
     font-size: 15px;
     line-height: 1.2;
 }
@@ -773,14 +803,15 @@ button.slick-arrow:after {
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
     button.slick-arrow {
-        left: 10.7%;
+        left: 11%;
+        bottom: 43%;
     }
 }
 
 @media screen and (max-width: 667px) and (orientation: landscape) {
     button.slick-arrow {
         left: 3.7%;
-        bottom: 33%;
+        bottom: 49%;
     }
 }
 
@@ -887,13 +918,14 @@ button.slick-arrow:after {
 @media screen and (max-width: 1200px) and (orientation: landscape) {
     .slick-dots {
         left: 15.5%;
+        bottom: 43%;
     }
 }
 
 @media screen and (max-width: 667px) and (orientation: landscape) {
     .slick-dots {
-        left: 8.5%;
-        bottom: 33%;
+        left: 9%;
+        bottom: 49%;
     }
 }
 
