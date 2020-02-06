@@ -296,6 +296,10 @@ p {
     color: #fff;
 }
 
+.nav__link.active {
+    font-weight: bold;
+}
+
 .content__slider {
     display: -webkit-box;
     display: -ms-flexbox;
