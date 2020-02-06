@@ -360,7 +360,20 @@ p {
 
 @media (max-width: 767px) {
     .content__inner {
+        top: 55px;
         left: 45px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .content__inner {
+        top: 115px;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .content__inner {
+        top: 35px;
     }
 }
 
@@ -607,7 +620,7 @@ p {
     .content__info {
         padding: 11px 0;
         max-width: 192px;
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
@@ -631,6 +644,13 @@ p {
     .advantage {
         height: 292px;
         bottom: -42px;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .advantage {
+        height: 135px;
+        padding-top: 5px;
     }
 }
 
@@ -673,6 +693,12 @@ p {
     }
 }
 
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .advantage__img {
+        display: none;
+    }
+}
+
 .advantage__info p {
     font-weight: 900;
     font-size: 22px;
@@ -702,7 +728,7 @@ button.slick-arrow {
     outline: none;
     cursor: pointer;
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 17.5%;
     z-index: 1;
 }
@@ -741,6 +767,19 @@ button.slick-arrow:after {
     }
 }
 
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    button.slick-arrow {
+        left: 10.7%;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    button.slick-arrow {
+        left: 3.7%;
+        bottom: 33%;
+    }
+}
+
 .slick-prev {
     margin-left: 4px;
     -webkit-transform: rotate(-45deg);
@@ -766,7 +805,7 @@ button.slick-arrow:after {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 20.5%;
     padding-left: 0;
 }
@@ -838,6 +877,19 @@ button.slick-arrow:after {
     .slick-dots {
         bottom: 50%;
         left: 16.5%;
+    }
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .slick-dots {
+        left: 15.5%;
+    }
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .slick-dots {
+        left: 8.5%;
+        bottom: 33%;
     }
 }
 
