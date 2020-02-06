@@ -3017,14 +3017,13 @@ $(function() {
     places.slick({
       arrows: true,
       dots: true,
-      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-        adaptiveHeight: true,
-        fade: true,
-        cssEase: 'linear',
-        // autoplay: true,
-      autoplaySpeed: 2000,
-      });
+      adaptiveHeight: true,
+      fade: true,
+      cssEase: "linear",
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
 
 });
