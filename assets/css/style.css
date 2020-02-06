@@ -354,7 +354,7 @@ p {
 @media (max-width: 1200px) {
     .content__inner {
         left: 140px;
-        top: 55px;
+        top: 200px;
     }
 }
 
@@ -702,7 +702,7 @@ button.slick-arrow {
     outline: none;
     cursor: pointer;
     position: absolute;
-    bottom: 42.8%;
+    bottom: 50%;
     left: 17.5%;
     z-index: 1;
 }
@@ -729,14 +729,14 @@ button.slick-arrow:after {
 
 @media (max-width: 1200px) {
     button.slick-arrow {
-        bottom: 45.8%;
+        bottom: 46%;
         left: 14.5%;
     }
 }
 
 @media (max-width: 767px) {
     button.slick-arrow {
-        bottom: 52.5%;
+        bottom: 50%;
         left: 7%;
     }
 }
@@ -766,7 +766,7 @@ button.slick-arrow:after {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 20.5%;
     padding-left: 0;
 }
@@ -829,16 +829,20 @@ button.slick-arrow:after {
 
 @media (max-width: 1200px) {
     .slick-dots {
-        top: 46%;
+        bottom: 46%;
         left: 20.5%;
     }
 }
 
 @media (max-width: 767px) {
     .slick-dots {
-        top: 39.2%;
+        bottom: 50%;
         left: 16.5%;
     }
+}
+
+.slick-list {
+    height: 587px;
 }
 
 /*Bootstrap*/
