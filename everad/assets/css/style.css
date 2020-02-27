@@ -382,6 +382,10 @@ body {
     }
 }
 
+.intro__number {
+    width: 63px;
+}
+
 @media (max-width: 460px) {
     .intro__number {
         height: 55px;
@@ -580,7 +584,7 @@ body {
     z-index: 5;
 }
 
-@media (max-width: 12221px) {
+@media (max-width: 1222px) {
     .intro__newprice--green {
         display: none;
     }
