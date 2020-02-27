@@ -271,8 +271,8 @@ body {
 
 .intro__arrow {
     position: absolute;
-    left: 25px;
-    bottom: 108px;
+    left: 27px;
+    bottom: 116px;
 }
 
 @media (max-width: 1199px) {
@@ -367,7 +367,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 25px;
+    padding-bottom: 29px;
 }
 
 @media (max-width: 1199px) {
@@ -795,19 +795,7 @@ body {
 }
 
 .info {
-    margin: 50px 30px;
-}
-
-@media (max-width: 1199px) {
-    .info {
-        margin: 130px 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .info {
-        margin: 0;
-    }
+    margin: 0 30px 0;
 }
 
 @media (max-width: 944px) {
@@ -856,7 +844,7 @@ body {
 
 @media (max-width: 768px) {
     .info__inner {
-        margin: 30px;
+        margin-bottom: 50px;
     }
 }
 
