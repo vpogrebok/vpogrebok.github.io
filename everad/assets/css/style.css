@@ -383,7 +383,7 @@ body {
 }
 
 .intro__number {
-    width: 63px;
+    height: 63px;
 }
 
 @media (max-width: 460px) {
