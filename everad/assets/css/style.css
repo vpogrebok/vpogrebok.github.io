@@ -42,6 +42,7 @@ body {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        padding-top: 86px;
     }
 }
 
@@ -51,6 +52,7 @@ body {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        padding-top: 0;
     }
 }
 
@@ -112,6 +114,19 @@ body {
 
 @media (max-width: 1222px) {
     .intro__circle {
+        display: none;
+    }
+}
+
+.intro__line {
+    width: 491px;
+    position: absolute;
+    top: 96px;
+    left: -26px;
+}
+
+@media (max-width: 1222px) {
+    .intro__line {
         display: none;
     }
 }
@@ -199,26 +214,6 @@ body {
 }
 
 @media (max-width: 1222px) {
-    .intro__mikocin--tablets {
-        top: 613px;
-    }
-}
-
-@media (max-width: 1199px) {
-    .intro__mikocin--tablets {
-        width: 170px;
-        left: -30px;
-    }
-}
-
-@media (max-width: 991px) {
-    .intro__mikocin--tablets {
-        top: 424px;
-        left: -48px;
-    }
-}
-
-@media (max-width: 991px) {
     .intro__mikocin--tablets {
         display: none;
     }
