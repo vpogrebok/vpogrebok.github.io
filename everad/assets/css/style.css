@@ -29,6 +29,12 @@ body {
     }
 }
 
+@media screen and (max-width: 821px) and (orientation: landscape) {
+    .intro {
+        height: 100%;
+    }
+}
+
 .intro__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -608,6 +614,11 @@ body {
     outline: none;
 }
 
+.intro__input:hover {
+    -webkit-box-shadow: 0px 0px 14px 0px #ffcb02;
+    box-shadow: 0px 0px 14px 0px #ffcb02;
+}
+
 .intro__image {
     margin-top: -53px;
     position: absolute;
@@ -623,6 +634,15 @@ body {
     background: -webkit-gradient(linear, left top, right top, from(#ffca02), to(#ffca02));
     background: -o-linear-gradient(left, #ffca02 0%, #ffca02 100%);
     background: linear-gradient(to right, #ffca02 0%, #ffca02 100%);
+    outline: none;
+}
+
+.intro__button:hover {
+    -webkit-box-shadow: 0px 0px 14px 0px #d1a522;
+    box-shadow: 0px 0px 14px 0px #d1a522;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #FF9800), to(#FFEB3B));
+    background: -o-linear-gradient(left, #FF9800 0, #FFEB3B);
+    background: linear-gradient(90deg, #FF9800 0, #FFEB3B);
 }
 
 .intro__btn {
@@ -635,6 +655,7 @@ body {
     background: transparent;
     border: 2px solid rgba(255, 235, 59, 0.3);
     cursor: pointer;
+    outline: none;
 }
 
 .intro__btn span {
@@ -2587,5 +2608,3 @@ body {
         margin-left: 91.66667%;
     }
 }
-
-/* Vendor */
