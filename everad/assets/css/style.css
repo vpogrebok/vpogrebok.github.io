@@ -48,7 +48,6 @@ body {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        padding-top: 86px;
     }
 }
 
@@ -58,7 +57,6 @@ body {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 0;
     }
 }
 
@@ -82,7 +80,7 @@ body {
 .intro__legs {
     width: 700px;
     position: absolute;
-    left: -135px;
+    left: -235px;
     top: -8px;
     z-index: 1;
 }
@@ -101,7 +99,7 @@ body {
 
 @media (max-width: 1199px) {
     .intro__legs {
-        left: -240px;
+        left: -340px;
     }
 }
 
@@ -114,7 +112,7 @@ body {
 .intro__circle {
     width: 520px;
     position: absolute;
-    left: 27px;
+    left: -89px;
     top: 150px;
 }
 
@@ -128,7 +126,7 @@ body {
     width: 491px;
     position: absolute;
     top: 96px;
-    left: -26px;
+    left: -126px;
 }
 
 @media (max-width: 1222px) {
@@ -139,7 +137,7 @@ body {
 
 .intro__mikocin {
     position: absolute;
-    left: 50px;
+    left: -50px;
     top: 455px;
     z-index: 2;
 }
@@ -152,15 +150,15 @@ body {
 
 @media (max-width: 991px) {
     .intro__mikocin {
-        top: 232px;
-        left: 44px;
+        top: 462px;
+        left: 125px;
     }
 }
 
 @media (max-width: 946px) {
     .intro__mikocin {
-        left: 54px;
-        top: 416px;
+        left: 71px;
+        top: 439px;
     }
 }
 
@@ -171,7 +169,7 @@ body {
 }
 
 .intro__mikocin--second {
-    left: 158px;
+    left: 58px;
     top: 588px;
     z-index: 4;
 }
@@ -189,7 +187,7 @@ body {
 }
 
 .intro__mikocin--third {
-    left: 310px;
+    left: 210px;
     top: 661px;
     z-index: 5;
 }
@@ -197,7 +195,7 @@ body {
 @media (max-width: 1222px) {
     .intro__mikocin--third {
         top: 559px;
-        left: 260px;
+        left: 160px;
     }
 }
 
@@ -214,7 +212,7 @@ body {
 }
 
 .intro__mikocin--tablets {
-    left: 6px;
+    left: -94px;
     top: 681px;
     z-index: 2;
 }
@@ -227,7 +225,7 @@ body {
 
 .intro__mikocin--grass {
     top: 448px;
-    left: 244px;
+    left: 144px;
     z-index: 1;
 }
 
@@ -550,26 +548,27 @@ body {
     border-radius: 9px;
     position: absolute;
     bottom: 153px;
-    left: 329px;
+    left: 229px;
     z-index: 3;
 }
 
 @media (max-width: 1222px) {
     .intro__newprice--orange {
         bottom: 98px;
-        left: 163px;
+        left: 63px;
     }
 }
 
 @media (max-width: 991px) {
     .intro__newprice--orange {
-        bottom: 250px;
+        bottom: 0;
+        left: 30px;
     }
 }
 
 @media (max-width: 946px) {
     .intro__newprice--orange {
-        bottom: 123px;
+        bottom: 0;
     }
 }
 
@@ -581,7 +580,7 @@ body {
     border-radius: 9px;
     position: absolute;
     bottom: 21px;
-    left: 440px;
+    left: 340px;
     z-index: 5;
 }
 
