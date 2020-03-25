@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap&subset=cyrillic" rel="stylesheet">
     
     <!-- Usefile meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -19,234 +20,978 @@
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="header__logo">
-                    <div class="header__logotype">Logo</div>
-                    <div class="header__info">Фабрика фотообоев в КИЕВЕ<br> изготовление фотообоев</div>
-                </div>
-                <div class="header__logo">
-                    <a href="tel:044 278 21 00" class="header__number">044 278 21 00</a>
-                    <div class="header__callback">
-                        <a href="#" class="btn">Обратный звонок</a>
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">crazyprank</div>
+            <div class="header__item" id="header__info">
+                <div class="header__nav">
+                    <div class="header__link">
+                        <div class="btn btn--header">Как пользоваться</div>
+                    </div>
+                    <div class="header__link">
+                        <button class="btn btn--header" type="button" data-toggle="modal" data-target="#request-modal">Обратная связь</button>
+                    </div>
+                    <div class="header__link">
+                        <button class="btn btn--call" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать звонок</button>
                     </div>
                 </div>
             </div>
+            <button class="burger" id="burger">
+                <span class="burger__item">menu</span>
+            </button>
         </div>
-    </header>
-<!-- Nav -->
-<nav class="nav">
-  <div class="container">
-    <ul class="nav__ul">
-      <li class="nav__li">
-        <a href="" class="nav__link active">главная</a>
-      </li>
-      <li class="nav__li">
-        <a href="#" class="nav__link">для детcкой</a>
-      </li>
-      <li class="nav__li">
-        <a href="#" class="nav__link">для спальни</a>
-      </li>
-      <li class="nav__li">
-        <a href="#" class="nav__link">для кухни</a>
-      </li>
-      <li class="nav__li">
-        <a href="#" class="nav__link">контакты</a>
-      </li>
-    </ul>
-  </div><!-- container -->
-</nav><!-- nav -->
+    </div>
+</header>
 
-<!-- Content -->
-<div class="content" id="slider">
-  <div>
-    <div class="content__slider">
-      <div class="content__opacity"></div>
-      <div class="content__inner">
-        <div class="content__title">
-          <strong>Фотообои</strong>
+<!-- Intro -->
+<div class="intro" id="intro">
+    <div class="container">
+        <div class="row intro__inner">
+            <div class="col-lg-8 col-md-8">
+                <div class="intro__title">
+                    <h1>Разыграй друга нежданным телефонным РОЗЫГРАШЕМ</h1>
+                    <div class="intro__subtitle">
+                        <p>После звонка тебе прийдёт запись разговора
+                        <img class="intro__emoji" src="/assets/img/intro/subtitle/smile.png" alt="">
+                        <img class="intro__emoji" src="/assets/img/intro/subtitle/fire.png" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div class="intro__buttons">
+                    <button class="btn btn--intro" type="button" data-toggle="modal" data-target="#feedback-modal">заказать звонок</button>
+                    <a href="#" class="intro__compilation">подборка сочных разговоров</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <img class="intro__iphone" src="/assets/img/intro/iphone.png" alt="">
+                <img class="intro__circle" src="/assets/img/intro/circle.png" alt="">
+            </div>
+            <img class="intro__circles" src="/assets/img/intro/bg/bg_circle.png" alt="">
+        </div><!-- /.row intro__inner -->
+    </div><!-- /.container -->
+</div><!-- /.intro -->
+
+<!-- Categories -->
+<div class="categories">
+    <div class="container">
+
+        <div class="categories__title">ВЫБЕРИТЕ ЗАПИСЬ ДЛЯ РОЗЫГРАША</div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6">
+                <div class="categories__heading">Категории</div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#1" data-id="#1_2" data-collapse="#1_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_1.png" alt="">
+                            <div class="categories__name categories__activecol" id='1_2'>Доставка</div>
+                        </div>
+
+                        <div class="categories__sm categories__sm--smblock" id="1_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#2"  data-id="#2_2" data-collapse="#2_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_2.png" alt="">
+                            <div class="categories__name" id="2_2">Полиция</div>
+                        </div>
+
+                        <div class="categories__sm" id="2_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#3" data-id="#3_2"  data-collapse="#3_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_3.png" alt="">
+                            <div class="categories__name" id="3_2">Спорт</div>
+                        </div>
+
+                        <div class="categories__sm" id="3_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#4" data-id="#4_2" data-collapse="#4_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_4.png" alt="">
+                            <div class="categories__name" id="4_2">Гей</div>
+                        </div>
+
+                        <div class="categories__sm" id="4_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#5" data-id="#5_2" data-collapse="#5_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_5.png" alt="">
+                            <div class="categories__name" id="5_2">Кавказец</div>
+                        </div>
+
+                        <div class="categories__sm" id="5_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#6" data-id="#6_2" data-collapse="#6_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_6.png" alt="">
+                            <div class="categories__name" id="6_2">Военкомат</div>
+                        </div>
+
+                        <div class="categories__sm" id="6_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#7" data-id="#7_2" data-collapse="#6_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_7.png" alt="">
+                            <div class="categories__name" id="7_2">Соседи</div>
+                        </div>
+
+                        <div class="categories__sm" id="6_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#8" data-id="#8_2" data-collapse="#8_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_8.png" alt="">
+                            <div class="categories__name" id="8_2">Школа/Универ</div>
+                        </div>
+
+                        <div class="categories__sm" id="8_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#9" data-id="#9_2" data-collapse="#9_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_9.png" alt="">
+                            <div class="categories__name" id="9_2">Водителям</div>
+                        </div>
+
+                        <div class="categories__sm" id="9_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#10" data-id="#10_2" data-collapse="#10_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_10.png" alt="">
+                            <div class="categories__name" id="10_2">Разыграть парня</div>
+                        </div>
+
+                        <div class="categories__sm" id="10_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100"></div>
+
+                    <div class="col-lg-6 col-md-6 categories__col" data-toggle-id="#11" data-id='#11_11' data-collapse="#11_3">
+                        <div class="categories__inner">
+                            <img class="categories__emoji" src="/assets/img/categories/category_11.png" alt="">
+                            <div class="categories__name" id="11_2">Разное</div>
+                        </div>
+
+                        <div class="categories__sm" id="11_3">
+                            <div class="audio">
+                                <div class="audio__inner">
+                                    <audio class="audio__cont">
+                                        <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                        Тег audio не поддерживается вашим браузером.
+                                        <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                                    </audio>
+                                    <a href="#" class="audio__play" >
+                                        <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                            <use class="audio__icon" xlink:href="#play"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="audio__title">Доставка 300 цветов</div>
+                                <div class="audio__price">5 грн</div>
+                                <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+                
+            </div><!-- /.col-lg-6 col-md-6 -->
+
+            <div class="col-lg-6 col-md-6">
+
+                <div class="categories__list categories__list--block" id="1">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_1.png" alt="">
+                            <div class="categories__name">Доставка</div>
+                        </div>
+                    </div>
+
+
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="2">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_2.png" alt="">
+                            <div class="categories__name">Полиция</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                     <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <div class="audio__play">
+                                <div class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                </div>
+                            </div>
+                                    <a href="#" class="audio__timeline--control"></a>
+                                </div>
+                                <a href="#" class="audio__mute">
+                                    <span class="glyphicon glyphicon--volume" data-toggle-class="glyphicon glyphicon-volume-off"></span>
+                                </a>  
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="3">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_3.png" alt="">
+                            <div class="categories__name">Спорт</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="4">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_4.png" alt="">
+                            <div class="categories__name">Гей</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="5">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_5.png" alt="">
+                            <div class="categories__name">Кавказец</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="6">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_6.png" alt="">
+                            <div class="categories__name">Военкомат</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="7">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_7.png" alt="">
+                            <div class="categories__name">Соседи</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="8">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_8.png" alt="">
+                            <div class="categories__name">Школа/Универ</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="9">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_9.png" alt="">
+                            <div class="categories__name">Водителям</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="10">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_10.png" alt="">
+                            <div class="categories__name">Разыграть парня</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+                <div class="categories__list" id="11">
+                    <div class="categories__item">
+                        <div class="categories__heading categories__heading--list">Список записей:</div>
+                        <div class="categories__subtitle">
+                            <img class="categories__emoji" src="/assets/img/categories/category_11.png" alt="">
+                            <div class="categories__name">Разное</div>
+                        </div>
+                    </div>
+                    <div class="audio">
+                        <div class="audio__inner">
+                            <audio class="audio__cont">
+                                <source src="/assets/audio/100.mp3" type="audio/mpeg">
+                                Тег audio не поддерживается вашим браузером.
+                                <a href="/assets/audio/100.mp3">Скачайте музыку</a>.	 
+                            </audio>
+                            <a href="#" class="audio__play" >
+                                <svg class="glyphicon glyphicon--play" data-toggle-class="glyphicon glyphicon--pause">
+                                    <use class="audio__icon" xlink:href="#play"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="audio__title">Доставка 300 цветов</div>
+                        <div class="audio__price">5 грн</div>
+                        <button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button>
+                    </div>
+                </div>
+
+            </div><!-- /.col-lg-6 col-md-6 -->
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.categorie -->
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row footer__row">
+            <div class="col-lg-7 col-sm-5 header__logo header__logo--footer">crazyprank</div>
+            <div class="col-lg-3 col-sm-4 footer__col">Мы гарантируем полную анонимность наших клиентов!</div>
+            <div class="col-lg-2 col-sm-3 footer__col">
+                <span>Почта для связи:</span>
+                <a class="footer__mail" href="mailto:admin@crazyprank.ua">admin@crazyprank.ua</a>
+            </div>
         </div>
-        <div class="content__item">
-          <div class="content__place">Для зaлa</div>
-          <div class="content__price">
-            <p>от <strong>50</strong> $/м&sup2</p>
-          </div>
+    </div>
+</footer>
+<div class="modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+        <svg class="modal__close-icon">
+            <use xlink:href="#close"></use>
+        </svg>
+      </button>
+      <div class="modal__title">обратная связь</div>
+      <div class="modal__inner">
+          <form action="/" method="post" class="modal__form">
+            <input class="modal__input" type="email" placeholder="Ваш E-mail">
+            <textarea class="modal__input modal__input--textarea" type="text" name="text" placeholder="Ваше сообщение"></textarea>
+            <button class="btn btn--black" type="submit" data-toggle="modal" data-target="#request-modal">Оставить заявку</button>
+          </form>
         </div>
-        <div class="content__info">Более 6000 идей фотообоев для гостиной</div>
-        <a class="btn btn--loock" href="#">Смотреть идеи </a>
-      </div><!-- content__inner -->
-    </div><!-- content__slider -->
+    </div>
   </div>
-
-  <div>
-    <div class="content__slider content__slider--second">
-      <div class="content__opacity"></div>
-      <div class="content__inner">
-        <div class="content__title">
-          <strong>Фотообои</strong>
-        </div>
-        <div class="content__item">
-          <div class="content__place">Для зaлa</div>
-          <div class="content__price">
-            <p>от <strong>50</strong> $/м&sup2</p>
-          </div>
-        </div>
-        <div class="content__info">Более 6000 идей фотообоев для гостиной</div>
-        <a class="btn btn--loock" href="#">Смотреть идеи </a>
-      </div><!-- content__inner -->
-    </div><!-- content__slider -->
-  </div>
-
-  <div>
-    <div class="content__slider content__slider--third">
-      <div class="content__opacity"></div>
-      <div class="content__inner">
-        <div class="content__title">
-          <strong>Фотообои</strong>
-        </div>
-        <div class="content__item">
-          <div class="content__place">Для зaлa</div>
-          <div class="content__price">
-            <p>от <strong>50</strong> $/м&sup2</p>
-          </div>
-        </div>
-        <div class="content__info">Более 6000 идей фотообоев для кухни</div>
-        <a class="btn btn--loock" href="#">Смотреть идеи </a>
-      </div><!-- content__inner -->
-    </div><!-- content__slider -->
-  </div>
-
-  <div>
-    <div class="content__slider content__slider--fourth">
-      <div class="content__opacity"></div>
-      <div class="content__inner">
-        <div class="content__title">
-          <strong>Фотообои</strong>
-        </div>
-        <div class="content__item">
-          <div class="content__place">Для зaлa</div>
-          <div class="content__price">
-            <p>от <strong>50</strong> $/м&sup2</p>
-          </div>
-        </div>
-        <div class="content__info">Более 6000 идей фотообоев для кухни</div>
-        <a class="btn btn--loock" href="#">Смотреть идеи </a>
-      </div><!-- content__inner -->
-    </div><!-- content__slider -->
-  </div>
-
-  <div>
-    <div class="content__slider content__slider--fifth">
-      <div class="content__opacity"></div>
-      <div class="content__inner">
-        <div class="content__title">
-          <strong>Фотообои</strong>
-        </div>
-        <div class="content__item">
-          <div class="content__place">Для зaлa</div>
-          <div class="content__price">
-            <p>от <strong>50</strong> $/м&sup2</p>
-          </div>
-        </div>
-        <div class="content__info">Более 6000 идей фотообоев для спальни</div>
-        <a class="btn btn--loock" href="#">Смотреть идеи </a>
-      </div><!-- content__inner -->
-    </div><!-- content__slider -->
-  </div>
-
-  <div>
-    <div class="content__slider content__slider--sixth">
-      <div class="content__opacity"></div>
-      <div class="content__inner">
-        <div class="content__title">
-          <strong>Фотообои</strong>
-        </div>
-        <div class="content__item">
-          <div class="content__place">Для зaлa</div>
-          <div class="content__price">
-            <p>от <strong>50</strong> $/м&sup2</p>
-          </div>
-        </div>
-        <div class="content__info">Более 6000 идей фотообоев для спальни</div>
-        <a class="btn btn--loock" href="#">Смотреть идеи </a>
-      </div>
-    </div><!-- content__inner -->
-  </div><!-- content__slider -->
 </div>
 
-<!-- Advantage -->
-<div class="advantage">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-6 advantage__col">
-        <img
-          class="advantage__img"
-          src="/assets/img/advantage/advantage_1.png"
-          alt=""
-        />
-        <div class="advantage__info">
-          <p>Печатаем что угодно</p>
-          <span
-            >Все фотообои мы изготавливаем под заказ на собственном
-            оборудовании. По этому можем напечатать совершенно все,что вы
-            захотите</span
-          >
+<div class="modal fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+        <svg class="modal__close-icon">
+            <use xlink:href="#close"></use>
+        </svg>
+      </button>
+      <div class="modal__title">Оформление заказа</div>
+      <div class="modal__subtitle">После оплаты вам будет доступна запись<br>разговора</div>
+      <div class="modal__inner">
+          <form action="/" method="post" class="modal__form">
+            <input class="modal__input" type="tel" placeholder="Номер телефона">
+            <input class="modal__input" type="email" placeholder="Ваш E-mail">
+            <div class="modal__input modal__input--feedback">
+              <span>Доставка 300 цветов (5 грн)</span>
+            </div>
+            <button class="btn btn--black" type="submit" data-toggle="modal" data-target="#request-modal">Оплатить (5 грн)</button>
+          </form>
         </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-6 advantage__col">
-        <img
-          class="advantage__img"
-          src="/assets/img/advantage/advantage_2.png"
-          alt=""
-        />
-        <div class="advantage__info">
-          <p>Любые размеры</p>
-          <span
-            >Профессиональное оборудование позволяет напечатать фотообои
-            совершенно любого размера. Можем заклеить как часть, таки все стену
-            без ограничений.</span
-          >
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-6 advantage__col">
-        <img
-          class="advantage__img"
-          src="/assets/img/advantage/advantage_3.png"
-          alt=""
-        />
-        <div class="advantage__info">
-          <p>Изготовление за 1 день</p>
-          <span
-            >В среднем, изготовление одних фотообоев среднего размера занимает
-            не более одного дня!</span
-          >
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 col-6 advantage__col">
-        <img
-          class="advantage__img"
-          src="/assets/img/advantage/advantage_4.png"
-          alt=""
-        />
-
-        <div class="advantage__info">
-          <p>Без посредников</p>
-          <span
-            >Мы имеем в наличие все необходимое оборудование для
-            самостоятельного изготовления фотообоев. А значит вы не
-            переплачиваете посредникам.</span
-          >
-        </div>
-      </div>
-    </div><!-- row -->
-  </div><!-- container -->
-</div><!-- advantage -->
+    </div>
+  </div>
+</div>
 
 
+
+
+<svg style="display: none;">
+    <symbol id="close" viewBox="0 0 47.971 47.971">
+        <g>
+            <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+            c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+            C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+            s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+        </g>
+    </symbol>
+    <symbol id="play" viewBox="0 0 366.56 366.56">
+        <g>
+            <g>
+                <path d="M295.312,179.832c-0.61-1.062-1.491-1.942-2.552-2.552l-79.36-46l-0.4-0.2l-78.96-45.4
+                    c-3.316-1.9-7.545-0.752-9.444,2.564c-0.599,1.046-0.915,2.23-0.916,3.436v183.24c0.022,3.813,3.107,6.898,6.92,6.92
+                    c1.434-0.002,2.831-0.449,4-1.28l78.8-45.28l79.36-46C296.074,187.376,297.216,183.146,295.312,179.832z"/>
+            </g>
+        </g>
+        <g>
+            <g>
+                <path d="M183.28,0C82.057,0,0,82.057,0,183.28s82.057,183.28,183.28,183.28s183.28-82.057,183.28-183.28S284.503,0,183.28,0z
+                     M183.28,332.52c-82.423,0-149.24-66.817-149.24-149.24S100.857,34.04,183.28,34.04s149.24,66.817,149.24,149.24
+                    S265.703,332.52,183.28,332.52z"/>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="pause__btn" viewBox="0 0 426.667 426.667">
+        <g>
+            <g>
+                <g>
+                    <rect x="234.667" y="128" width="42.667" height="170.667"/>
+                    <rect x="149.333" y="128" width="42.667" height="170.667"/>
+                    <path d="M213.333,0C95.467,0,0,95.467,0,213.333s95.467,213.333,213.333,213.333S426.667,331.2,426.667,213.333
+                        S331.2,0,213.333,0z M213.333,384c-94.08,0-170.667-76.587-170.667-170.667S119.253,42.667,213.333,42.667
+                        S384,119.253,384,213.333S307.413,384,213.333,384z"/>
+                </g>
+            </g>
+        </g>
+    </symbol>
+</svg>
 <script src ="assets/js/app.min.js"></script>
 
 </body>
