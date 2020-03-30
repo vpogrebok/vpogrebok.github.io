@@ -2517,12 +2517,6 @@ p, h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-@media (max-width: 767px) {
-    .categories__sm--smblock {
-        display: block;
-    }
-}
-
 .footer {
     background-color: #000;
 }
@@ -2769,7 +2763,7 @@ p, h1, h2, h3, h4, h5, h6 {
     bottom: -11px;
 }
 
-.audio {
+.audio__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2786,20 +2780,20 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991px) {
-    .audio {
+    .audio__inner {
         padding: 15px;
     }
 }
 
 @media (max-width: 991px) {
-    .audio {
+    .audio__inner {
         margin-bottom: 10px;
         font-size: 12px;
     }
 }
 
 @media (max-width: 414px) {
-    .audio {
+    .audio__inner {
         padding: 10px;
         font-size: 11px;
     }
@@ -2830,35 +2824,27 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.audio__iconp {
-    display: none;
-}
-
-.t {
-    display: block;
-}
-
-.glyphicon--play {
+.audio__play {
     background: url("../img/play.svg");
     width: 30px;
     height: 30px;
 }
 
 @media (max-width: 991px) {
-    .glyphicon--play {
+    .audio__play {
         width: 25px;
         height: 25px;
     }
 }
 
-.glyphicon--pause {
+.audio__pause {
     background: url("../img/pause.svg");
     width: 30px;
     height: 30px;
 }
 
 @media (max-width: 991px) {
-    .glyphicon--pause {
+    .audio__pause {
         width: 25px;
         height: 25px;
     }
