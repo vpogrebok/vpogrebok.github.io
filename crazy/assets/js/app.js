@@ -978,22 +978,22 @@ $(function() {
                 {
                     name: 'Доставка',
                     audio: [
-                        muz_1 = [0, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_2 = [1, 'Доставка 3000000 цветов', '/assets/audio/100.mp3'],
+                        muz_1 = [0, 'Доставка 3 цветов', '/assets/audio/100.mp3'],
+                        muz_2 = [1, 'Доставка 30 цветов', '/assets/audio/100.mp3'],
                         muz_3 = [2, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_4 = [3, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_5 = [4, 'Доставка 300 цветов', '/assets/audio/100.mp3']
+                        muz_4 = [3, 'Доставка 3000 цветов', '/assets/audio/100.mp3'],
+                        muz_5 = [4, 'Доставка 30000 цветов', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Полиция',
                     audio: [
-                        muz_6 = [5, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
+                        muz_6 = [5, '300 цветов', '/assets/audio/100.mp3'],
                         muz_7 = [6, 'Доставка 30 цветов', '/assets/audio/00464.mp3'],
                         muz_8 = [7, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
                         muz_9 = [8, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
                         muz_10 = [9, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_11 = [10, 'Доставка 300 цветов', '/assets/audio/100.mp3']
+                        muz_11 = [10, 'Доставка 3 цветов', '/assets/audio/100.mp3']
                     
                     ]
                 },
@@ -1011,49 +1011,49 @@ $(function() {
                 {
                     name: 'Гей',
                     audio: [
-                        muz_12 = [11, 'Гей', '/assets/audio/100.mp3']
+                        muz_18 = [17, 'Гей', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Кавказец',
                     audio: [
-                        muz_12 = [11, 'Кавказец', '/assets/audio/100.mp3']
+                        muz_19 = [18, 'Кавказец', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Военкомат',
                     audio: [
-                        muz_12 = [11, 'Военкомат', '/assets/audio/100.mp3']
+                        muz_12 = [19, 'Военкомат', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Соседи',
                     audio: [
-                        muz_12 = [11, 'Соседи', '/assets/audio/100.mp3']
+                        muz_12 = [20, 'Соседи', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Школа/Универ',
                     audio: [
-                        muz_12 = [11, 'Школа/Универ', '/assets/audio/100.mp3']
+                        muz_12 = [21, 'Школа/Универ', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Водителям',
                     audio: [
-                        muz_12 = [11, 'Водителям', '/assets/audio/100.mp3']
+                        muz_12 = [22, 'Водителям', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Разыграть парня',
                     audio: [
-                        muz_12 = [11, 'Разыграть парня', '/assets/audio/100.mp3']
+                        muz_12 = [23, 'Разыграть парня', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Разное',
                     audio: [
-                        muz_12 = [11, 'Разное', '/assets/audio/100.mp3']
+                        muz_12 = [24, 'Разное', '/assets/audio/100.mp3']
                     ]
                 }
             ];
@@ -1063,28 +1063,43 @@ $(function() {
              if($(".categories__activecol").text() == $categories[i].name) {
                   var  newAudio = $('.audio').empty(),
                        allAudios = $categories[i].audio
+                       
                      
                        allAudios.forEach(function(item, i) { 
-                         $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button></div>')
-                        })
-                }
-        });
+                         $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-xz="#'+allAudios[i][0]+'" data-toggle="modal" data-target="#request-modal">Заказать</button></div>')
+                        
+                         
+                            $('.btn--audio').on('click', function() {
+                                $('.modal__input').empty().append(' <span>'+allAudios[i][1]+'</span> ');
+                                throw error;
+                            })
+                         })
+                        }
+                    });
                 
         var menu$ = $("[data-toggle-id]");
-        menu$.on('click', function() {
+        $("[data-id]").on('click', function() {
             
             $categories.forEach(function(item, i) {
                 
                 if($(".categories__activecol").text() == $categories[i].name) {
                     var  newAudio = $('.audio').empty(),
-                         allAudios = $categories[i].audio
-                
+                         allAudios = $categories[i].audio,
+                         newTitle =  $('.modal__input--feedback').empty()
+    
                          allAudios.forEach(function(item, i) {
-                             $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button></div>')
+                             $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-toggle="modal" data-target="#request-modal">Заказать</button></div>')
+    
+                             $('.btn--audio').on('click', function() {
+                                $('.modal__input').empty().append(' <span>'+allAudios[i][1]+'</span> ');
+                                throw error;
                             })
+                        })
                 }
             })
         });
+    
+       
     
         function playNewSong(id) {
             $categories.forEach(function(category, index) {
@@ -1096,7 +1111,6 @@ $(function() {
                             id_song = id;
                             Song = new Audio(url);
                             $('.audio__inner#'+id+' .audio__play').removeClass('audio__play').addClass("audio__pause");
-                            console.log($('.audio__pause'))
                             Song.play();
                         }
                     })
@@ -1111,6 +1125,9 @@ $(function() {
                         Song.play();
                         $('.audio__inner#'+id+' .audio__play').removeClass('audio__play').addClass("audio__pause");
                     } else {
+                        $('.btn').on('click', function() {
+                            Song.pause();
+                        })
                         Song.pause();
                         $('.audio__pause').removeClass('audio__pause').addClass("audio__play");
                     }
