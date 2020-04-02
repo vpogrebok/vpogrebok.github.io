@@ -2016,6 +2016,12 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media screen and (max-width: 812px) and (orientation: landscape) {
+    .intro__iphone {
+        width: 180px;
+    }
+}
+
 .intro__circle {
     width: 355px;
     -webkit-animation: circle 8s alternate infinite;
@@ -2044,6 +2050,12 @@ p, h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767px) {
     .intro__circle {
         display: none;
+    }
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+    .intro__circle {
+        width: 180px;
     }
 }
 
@@ -2118,7 +2130,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .header.fixed {
-    padding: 25px 0;
+    padding: 20px 0;
     margin-top: 0;
     background-color: #000;
     -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -2850,9 +2862,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .audio__play {
-    background: url("../img/play.svg");
+    background: url("../img/audio/play.svg");
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 @media (max-width: 991px) {
@@ -2863,9 +2876,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .audio__pause {
-    background: url("../img/pause.svg");
+    background: url("../img/audio/pause.svg");
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 @media (max-width: 991px) {

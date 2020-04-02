@@ -924,9 +924,9 @@ $(function() {
     
         var targetCollapse = $(event.target)
           .closest("[data-collapse]")
-          .data("collapse");
-    
-        var active = $(event.target)
+          .data("collapse"),
+          
+          active = $(event.target)
           .closest("[data-id]")
           .data("id");
     
@@ -939,22 +939,18 @@ $(function() {
             $(this).find('.categories__name').removeClass('categories__activecol')
           })
           $(active).addClass('categories__activecol');
+        })
     
-      
-        
-        
-      });
     } else {
-      var menu$ = $("[data-toggle-id]")
     
-      menu$.on("click", function(event) {
+      $("[data-toggle-id]").on("click", function(event) {
         event.preventDefault();
       
         var targetElementSelector = $(event.target)
           .closest("[data-toggle-id]")
-          .data("toggle-id");
+          .data("toggle-id"),
           
-        var active = $(event.target)
+          active = $(event.target)
           .closest("[data-id]")
           .data("id");
     
@@ -963,13 +959,13 @@ $(function() {
           })
             $(targetElementSelector).show();
     
-    
-          menu$.each(function() {
+          $("[data-toggle-id]").each(function() {
             $(this).find('.categories__name').removeClass('categories__activecol')
           })
             $(active).addClass('categories__activecol');
-      });
+      })
     }
+    
     
     $(document).ready( function(){
     
@@ -978,82 +974,77 @@ $(function() {
                 {
                     name: 'Доставка',
                     audio: [
-                        muz_1 = [0, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_2 = [1, 'Доставка 3000000 цветов', '/assets/audio/100.mp3'],
-                        muz_3 = [2, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_4 = [3, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_5 = [4, 'Доставка 300 цветов', '/assets/audio/100.mp3']
+                        [0, 'Доставка 3 цветов', '/assets/audio/100.mp3'],
+                        [1, 'Доставка 30 цветов', '/assets/audio/100.mp3'],
+                        [33, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
+                        [3, 'Доставка 3000 цветов', '/assets/audio/100.mp3'],
+                        [4, 'Доставка 30000 цветов', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Полиция',
                     audio: [
-                        muz_6 = [5, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_7 = [6, 'Доставка 30 цветов', '/assets/audio/00464.mp3'],
-                        muz_8 = [7, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_9 = [8, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_10 = [9, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
-                        muz_11 = [10, 'Доставка 300 цветов', '/assets/audio/100.mp3']
+                        [5, '300 цветов', '/assets/audio/100.mp3'],
+                        [6, 'Доставка 30 цветов', '/assets/audio/00464.mp3'],
+                        [7, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
+                        [8, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
+                        [9, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
+                        [10, 'Доставка 3 цветов', '/assets/audio/100.mp3']
                     
                     ]
                 },
                 {
                     name: 'Спорт',
                     audio: [
-                        muz_12 = [11, 'Спорт', '/assets/audio/100.mp3'],
-                        muz_13 = [12, 'Доставка 30 цветов', '/assets/audio/00464.mp3'],
-                        muz_14 = [13, 'Спорт', '/assets/audio/100.mp3'],
-                        muz_15 = [14, 'Спорт', '/assets/audio/100.mp3'],
-                        muz_16 = [15, 'Спорт', '/assets/audio/100.mp3'],
-                        muz_17 = [16, 'Спорт', '/assets/audio/100.mp3']
+                        [11, 'Спорт', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Гей',
                     audio: [
-                        muz_12 = [11, 'Гей', '/assets/audio/100.mp3']
+                        [17, 'Гей', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Кавказец',
                     audio: [
-                        muz_12 = [11, 'Кавказец', '/assets/audio/100.mp3']
+                        [18, 'Кавказец', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Военкомат',
                     audio: [
-                        muz_12 = [11, 'Военкомат', '/assets/audio/100.mp3']
+                        [19, 'Военкомат', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Соседи',
                     audio: [
-                        muz_12 = [11, 'Соседи', '/assets/audio/100.mp3']
+                        [20, 'Соседи', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Школа/Универ',
                     audio: [
-                        muz_12 = [11, 'Школа/Универ', '/assets/audio/100.mp3']
+                        [21, 'Школа/Универ', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Водителям',
                     audio: [
-                        muz_12 = [11, 'Водителям', '/assets/audio/100.mp3']
+                        [22, 'Водителям', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Разыграть парня',
                     audio: [
-                        muz_12 = [11, 'Разыграть парня', '/assets/audio/100.mp3']
+                        [23, 'Разыграть парня', '/assets/audio/100.mp3']
                     ]
                 },
                 {
                     name: 'Разное',
                     audio: [
-                        muz_12 = [11, 'Разное', '/assets/audio/100.mp3']
+                        [24, 'Разное', '/assets/audio/100.mp3']
                     ]
                 }
             ];
@@ -1063,25 +1054,38 @@ $(function() {
              if($(".categories__activecol").text() == $categories[i].name) {
                   var  newAudio = $('.audio').empty(),
                        allAudios = $categories[i].audio
+                       
                      
                        allAudios.forEach(function(item, i) { 
-                         $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button></div>')
-                        })
-                }
-        });
+                         $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-xz="#'+allAudios[i][0]+'" data-toggle="modal" data-target="#request-modal">Заказать</button></div>')
+                        
+                         
+                            $('.btn--audio').on('click', function() {
+                                $('.modal__input').empty().append(' <span>'+allAudios[i][1]+'</span> ');
+                                throw error;
+                            })
+                         })
+                        }
+                    });
                 
         var menu$ = $("[data-toggle-id]");
-        menu$.on('click', function() {
+        $("[data-id]").on('click', function() {
             
             $categories.forEach(function(item, i) {
                 
                 if($(".categories__activecol").text() == $categories[i].name) {
                     var  newAudio = $('.audio').empty(),
-                         allAudios = $categories[i].audio
-                
+                         allAudios = $categories[i].audio,
+                         newTitle =  $('.modal__input--feedback').empty()
+    
                          allAudios.forEach(function(item, i) {
-                             $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-toggle="modal" data-target="#feedback-modal">Заказать</button></div>')
+                             $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-toggle="modal" data-target="#request-modal">Заказать</button></div>')
+    
+                             $('.btn--audio').on('click', function() {
+                                $('.modal__input').empty().append(' <span>'+allAudios[i][1]+'</span> ');
+                                throw error;
                             })
+                        })
                 }
             })
         });
@@ -1095,9 +1099,8 @@ $(function() {
                             var url = array[2];
                             id_song = id;
                             Song = new Audio(url);
-                            $('.audio__inner#'+id+' .audio__play').removeClass('audio__play').addClass("audio__pause");
-                            console.log($('.audio__pause'))
                             Song.play();
+                            $('.audio__inner#'+id+' .audio__play').removeClass('audio__play').addClass("audio__pause");
                         }
                     })
                 })
@@ -1106,7 +1109,12 @@ $(function() {
         
         function playPauseSong(id) {
             if ( Song ) {
+                
                 if ( id == id_song ) {
+                    $('.btn--audio').on('click', function() {
+                        Song.pause();
+                        console.log('123')
+                    })
                     if ( Song.paused ) {
                         Song.play();
                         $('.audio__inner#'+id+' .audio__play').removeClass('audio__play').addClass("audio__pause");
@@ -1124,9 +1132,10 @@ $(function() {
             }
         }
         
-        $('.audio').on('click', function(event) {
+        $('.audio__play').on('click', function(event) {
             var id = $(event.target).parent().attr('id');
             playPauseSong(id);
+            
         })
     });
 });
