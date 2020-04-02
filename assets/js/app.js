@@ -1059,16 +1059,14 @@ $(function() {
                        allAudios.forEach(function(item, i) { 
                          $('.audio').append(' <div class="audio__inner" id="'+allAudios[i][0]+'"><div class="audio__play"></div><div class="audio__title">'+allAudios[i][1]+'</div><div class="audio__price">5 грн</div><button class="btn btn--audio" type="button" data-xz="#'+allAudios[i][0]+'" data-toggle="modal" data-target="#request-modal">Заказать</button></div>')
                         
-                         
-                            $('.btn--audio').on('click', function() {
+                         $('.btn--audio').on('click', function() {
                                 $('.modal__input').empty().append(' <span>'+allAudios[i][1]+'</span> ');
                                 throw error;
                             })
                          })
                         }
                     });
-                
-        var menu$ = $("[data-toggle-id]");
+                    
         $("[data-id]").on('click', function() {
             
             $categories.forEach(function(item, i) {
@@ -1132,10 +1130,9 @@ $(function() {
             }
         }
         
-        $('.audio__play').on('click', function(event) {
+        $('.audio').on('click', function(event) {
             var id = $(event.target).parent().attr('id');
             playPauseSong(id);
-            
         })
     });
 });
