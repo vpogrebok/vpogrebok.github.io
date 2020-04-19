@@ -16,11 +16,11 @@
     <meta name="description" content="">
     
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/Favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/Favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/Favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/Favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/img/Favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     
@@ -42,7 +42,7 @@
                         <button class="btn btn--header" type="button" data-toggle="modal" data-target="#feedback-modal">Обратная связь</button>
                     </div>
                     <div class="header__link">
-                        <button class="btn btn--call" type="button" data-toggle="modal" data-target="#request-modal">Заказать звонок</button>
+                        <button class="btn btn--call" type="button" data-scroll="#order">Заказать звонок</button>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,9 @@
                     </div>
                 </div>
                 <div class="intro__buttons">
-                    <button class="btn btn--intro" type="button" data-toggle="modal" data-target="#request-modal">заказать звонок</button>
+                    <button class="btn btn--intro" type="button" data-scroll="#order">заказать звонок</button>
+                 
+                    <!-- <button class="btn btn--intro" type="button" data-toggle="modal" data-target="#request-modal">заказать звонок</button> -->
                     <a href="#" class="intro__compilation">подборка сочных разговоров</a>
                 </div>
             </div>
@@ -82,7 +84,7 @@
 </div><!-- /.intro -->
 
 <!-- Categories -->
-<div class="categories">
+<div class="categories" id='order'>
     <div class="container">
 
         <div class="categories__title">ВЫБЕРИТЕ ЗАПИСЬ ДЛЯ РОЗЫГРАША</div>
@@ -344,6 +346,7 @@
         </div>
     </div>
 </footer>
+<!-- Обратная связь -->
 <div class="modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -364,6 +367,7 @@
   </div>
 </div>
 
+<!-- Оформление заказа -->
 <div class="modal fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -387,6 +391,25 @@
   </div>
 </div>
 
+<!-- Оплачено -->
+<div class="modal fade" id="paid-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+        <svg class="modal__close-icon">
+            <use xlink:href="#close"></use>
+        </svg>
+      </button>
+      <div class="modal__title">Оплачено</div>
+      <div class="modal__subtitle">Оплата прошла успешно. Запись разговора<br>будет прислана на E-mail, либо же Вы<br>сможете прослушать её в данном окне</div>
+      <div class="modal__inner">
+          <form action="/" method="post" class="modal__form">
+            <button class="btn btn--black" type="submit" data-toggle="modal" data-target="#paid-modal">Проверить статус звонка</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
 
 
 
