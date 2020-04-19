@@ -974,8 +974,8 @@ $(function() {
                 {
                     name: 'Доставка',
                     audio: [
-                        [0, 'Доставка 3 цветов', '/assets/audio/100.mp3'],
-                        [1, 'Доставка 30 цветов', '/assets/audio/100.mp3'],
+                        [555, 'Доставка 3 цветов', '/assets/audio/100.mp3'],
+                        [386, 'Доставка 30 цветов', '/assets/audio/100.mp3'],
                         [33, 'Доставка 300 цветов', '/assets/audio/100.mp3'],
                         [3, 'Доставка 3000 цветов', '/assets/audio/100.mp3'],
                         [4, 'Доставка 30000 цветов', '/assets/audio/100.mp3']
@@ -1115,7 +1115,7 @@ $(function() {
                     })
                     if ( Song.paused ) {
                         Song.play();
-                        $('.audio__inner#'+id+' .audio__play').removeClass('audio__play').addClass("audio__pause");
+                        $('.audio__inner#'+id+'.audio__play').removeClass('audio__play').addClass("audio__pause");
                     } else {
                         Song.pause();
                         $('.audio__pause').removeClass('audio__pause').addClass("audio__play");
@@ -1135,4 +1135,16 @@ $(function() {
             playPauseSong(id);
         })
     });
+
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+      
+        var $this = $(this),
+            blockId = $this.data('scroll'),
+            blockOffset = $(blockId).offset().top;
+      
+        $("html, body").animate({
+            scrollTop:  blockOffset - 0.5
+        }, 500)
+      });
 });
